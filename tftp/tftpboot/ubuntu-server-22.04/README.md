@@ -1,0 +1,1 @@
+This directory should contain the vmlinuz and initrd files.

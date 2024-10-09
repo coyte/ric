@@ -1,0 +1,1 @@
+This directory contains the configuration for pxelinux.0 and menu
