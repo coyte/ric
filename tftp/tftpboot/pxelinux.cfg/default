@@ -1,0 +1,18 @@
+DEFAULT menu.c32
+PROMPT 0
+timeout 200
+ONTIMEOUT linux
+menu title My Custom PXE Boot Menu
+
+LABEL linux
+  MENU LABEL Ubuntu-22.04.4-live-server-amd64
+  KERNEL ubuntu-server-22.04/vmlinuz
+  INITRD ubuntu-server-22.04/initrd
+  APPEND root=/dev/ram0 ramdisk_size=1500000 ip=dhcp url=http://192.168.2.215/ubuntu-22.04.5-live-server-amd64.iso autoinstall ds=nocloud-net;s=http://192.168.2.215/ ---
+  
+LABEL linux2
+  MENU LABEL This is a second boot option
+  KERNEL ubuntu-server-22.04/vmlinuz
+  INITRD ubuntu-server-22.04/initrd
+  APPEND root=/dev/ram0 ramdisk_size=1500000 ip=dhcp url=http://192.168.2.215/ubuntu-22.04.5-live-server-amd64.iso ---
+
